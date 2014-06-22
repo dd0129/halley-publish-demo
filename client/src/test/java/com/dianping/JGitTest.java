@@ -2,20 +2,14 @@ package com.dianping;
 
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.api.ListBranchCommand;
-import org.eclipse.jgit.api.LogCommand;
 import org.eclipse.jgit.api.PullResult;
 import org.eclipse.jgit.internal.storage.file.FileRepository;
-import org.eclipse.jgit.lib.BaseRepositoryBuilder;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
-import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.junit.Test;
 
-import javax.annotation.Resource;
 import java.io.File;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -75,7 +69,7 @@ public class JGitTest {
                     File file = new File(localPath + fileName);
                     String s = FileUtils.readFileToString(file);
                     System.out.println(s);
-                    //git.branchDelete().setBranchNames("tmp"+num).call();
+                    //git.branchDelete().setBranchNames("tmp"+num).callback();
                 }catch(Exception e){
                     e.printStackTrace();
                 }

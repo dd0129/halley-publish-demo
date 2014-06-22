@@ -16,8 +16,8 @@ public class HdfsTest {
     static FileSystem hdfs;
     static{
         String path = "/usr/java/hadoop-1.0.3/conf/";
-        conf.addResource(new Path(path + "core-site.xml"));
-        conf.addResource(new Path(path + "hdfs-site.xml"));
+        conf.addResource(new Path(path + "core-site.xml.bak"));
+        conf.addResource(new Path(path + "hdfs-site.xml.bak"));
         conf.addResource(new Path(path + "mapred-site.xml"));
         path = "/usr/java/hbase-0.90.3/conf/";
         conf.addResource(new Path(path + "hbase-site.xml"));
